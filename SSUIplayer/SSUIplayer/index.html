@@ -1,0 +1,1027 @@
+<!DOCTYPE HTML>
+<html manifest="sPlayer.appcache">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Self-Sustainble UI</title>
+    
+    <meta name="viewport" content="width=1366">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+    <link type="text/css" rel="stylesheet" href="styles/albums.css">
+    <link type="text/css" rel="stylesheet" href="styles/genres.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<!-- menu buttons that change sizes depending on clicks-->
+<div class="menu2">
+    <div id="title" class="discover">
+      <ul>
+          <li id='button1' class="topsongs active">Top Songs
+          </li>
+            <li id='button2' class="newreleases">New Releases
+            </li>
+              <li id='button3' class="recommended">Moods
+              </li>
+                <li id='button4' class="genres">Genres
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- main body of the app -->
+<body class="discover">
+    <div id="box">
+        <div class="bgCont">
+            <div class="bg">
+                <div class="genreArt"></div>
+            </div>
+        </div>
+        <div class="bg-lyr">
+        <!-- search -->
+            <div class="header">
+                <div class="menu-ico">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="search">
+                    <label for="search" class="search-ico"></label>
+                    <input type="text" name="search" id="search" placeholder="Search music" autocomplete="off" />
+                </div>
+                <div class="titleee">Self-Sustainable UI
+                </div>
+            </div>
+            <div class="menu">
+                <ul class="menu-list">
+                    <li class="discover-li active">
+                        <div class="content-ico">
+                            <div class="ico-left">
+                            </div>
+                        </div>
+                        <span>Discover</span>
+                    </li>
+                </ul>        
+                <div class="results-list">
+                    <p id="noresults">No results found</p>
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="content discover selected">
+                <div class="tab topsongs active" onclick="sort();">
+                    <div class="album robyncage">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Happy Ukulele</h1>
+                            <p>Happy</p>
+                        </div>
+                    </div>
+                    <div class="album joshgarrels">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Penny Whistle</h1>
+                            <p>Pleasing</p>
+                        </div>
+                    </div>
+                    <div class="album mitchfroemming">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Country Cue 1</h1>
+                            <p>Exciting</p>
+                        </div>
+                    </div>
+                     <div class="album alexon">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Funky Junky</h1>
+                            <p>Pop</p>
+                        </div>
+                    </div>
+                    <div class="album shayleesimeone">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Big Car Thief</h1>
+                            <p>Electronic</p>
+                        </div>
+                    </div>
+                    <div class="album patmcgee">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Long Live Death</h1>
+                            <p>Angry</p>
+                        </div>
+                    </div>
+                    <div class="album heathmcnease">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Pentagram</h1>
+                            <p>Metal</p>
+                        </div>
+                    </div>
+                    <div class="album greatmutations">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>HiFi Brutality</h1>
+                            <p>Rock</p>
+                        </div>
+                    </div>
+                    <div class="album truenorthrecords">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Horror Epic</h1>
+                            <p>Nervous</p>
+                        </div>
+                    </div>
+                    <div class="album wildchild">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>30 Second Classical</h1>
+                            <p>Sad</p>
+                        </div>
+                    </div>
+                    <div class="album aaronparker">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Front Porch Sitter</h1>
+                            <p>Boring</p>
+                        </div>
+                    </div>
+                    <div class="album camiloseptimo">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Acousting Meditation 2</h1>
+                            <p>Sleepy</p>
+                        </div>
+                    </div>
+                    <div class="album saintseneca">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Amazing Grace</h1>
+                            <p>Peaceful</p>
+                        </div>
+                    </div>
+                    <div class="album-content camiloseptimo">
+                        <div class="album-large">
+                            <div class="art"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Sleepy</h1>
+                            <ul class="songs-list">
+                                <li id="sID072" data-song="http://audionautix.com/Music/AcousticMeditation2.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: acoustic mediation 2 <br> mood: sleepy</p></li>
+                                </ul>
+                        </div>
+                    </div>
+                    <div class="album-content aaronparker">
+                        <div class="album-large">
+                            <div class="art"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Boring</h1>
+                            <ul class="songs-list">
+                                <li id="sID067" data-song="http://audionautix.com/Music/FrontPorchSitter.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Front Porch Sitter <br> mood: Boring</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="album-content wildchild">
+                        <div class="album-large">
+                            <div class="art"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Sad</h1>
+                            <ul class="songs-list">
+                                <li id="sID061" data-song="http://audionautix.com/Music/30SecondClassical.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: 30 second classical <br> mood: sad</p></li>
+                                 </ul>
+                        </div>
+                    </div>
+                    <div class="album-content mitchfroemming">
+                        <div class="album-large">
+                            <div class="art"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Exciting</h1>
+                            <ul class="songs-list">
+                                <li id="sID058" data-song="http://audionautix.com/Music/CountryCue1.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>Song: Country Cue 1<br>Mood:Exciting</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="album-content heathmcnease">
+                        <div class="album-large">
+                            <div class="art"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Metal</h1>
+                            <ul class="songs-list">
+                                <li id="sID052" data-song="http://audionautix.com/Music/Pentagram.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Pentagram<br>genre: metal</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="album-content truenorthrecords">
+                        <div class="album-large">
+                            <div class="art"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Nervous</h1>
+                            <ul class="songs-list">
+                                <li id="sID042" data-song="http://audionautix.com/Music/HorrorEpic.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Horror Epic <br> mood: nervous</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="album-content alexon">
+                        <div class="album-large">
+                            <div class="art"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Pop</h1>
+                            <ul class="songs-list">
+                                <li id="sID035" data-song="http://audionautix.com/Music/FunkyJunky.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: funky junky <br>genre: pop</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="album-content robyncage">
+                        <div class="album-large">
+                            <div class="art"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Happy</h1>
+                            <ul class="songs-list">
+                                <li id="sID030" data-id="happy" data-song="http://audionautix.com/Music/HappyUkulele.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>Song: Happy Ukelele<br>Mood: Happy<br></p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="album-content greatmutations">
+                        <div class="album-large">
+                            <div class="art"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Rock</h1>
+                            <ul class="songs-list">
+                                <li id="sID024" data-song="http://audionautix.com/Music/HiFiBrutality.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: HiFi Brutalirt <br> genre: Rock</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="album-content patmcgee">
+                        <div class="album-large">
+                            <div class="art"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Angry</h1>
+                            <ul class="songs-list">
+                                <li id="sID020" data-song="http://audionautix.com/Music/LongLiveDeath.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: long live death <br> mood: angry</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="album-content shayleesimeone">
+                        <div class="album-large">
+                            <div class="art"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Electronic</h1>
+                            <ul class="songs-list">
+                                <li id="sID018" data-song="http://audionautix.com/Music/BigCarTheft.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Big Car Thier <br> genre: electronic</p></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="album-content saintseneca">
+                        <div class="album-large">
+                            <div class="art"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Peaceful</h1>
+                            <ul class="songs-list">
+                                <li id="sID014" data-song="http://audionautix.com/Music/AmazingGrace.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: amazing grace <br> mood: peaceful</p></li>
+                                           </ul>
+                        </div>
+                    </div>
+                    <div class="album-content thesaintjohns">
+                        <div class="album-large">
+                            <div class="art"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Calm</h1>
+                            <ul class="songs-list">
+                                <li id="sID012" data-song="http://audionautix.com/Music/12Mornings.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: 12 Mornings <br> mood: calm</p></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="album-content joshgarrels">
+                        <div class="album-large">
+                            <div class="art"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Pleasing</h1>
+                            <ul class="songs-list">
+                                <li id="sID001" data-song="http://audionautix.com/Music/PennyWhistle.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>Song: Penny Whistle <br>Mood: Pleasing</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="album-content albertacross">
+                        <div class="album-large">
+                            <div class="art"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Relax</h1>
+                            <ul class="songs-list">
+                                <li id="sID008" data-song="http://audionautix.com/Music/Serenity.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: serenity <br> mood: relax</p></li>
+                                    <li id="sID009" data-song="http://audionautix.com/Music/PartingGlass.mp3"><span><i>2</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Song1 <br>genre = relax</p></li>
+                                    <li id="sID010" data-song="http://audionautix.com/Music/AmazingGrace.mp3"><span><i>3</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Song2 <br>genre: relax</p></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab newreleases">
+                    <div class="album mitchfroemming">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Country Cue 1</h1>
+                            <p>Exciting</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab recommended">
+                        <div class="album robyncage">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Happy</h1>
+                        </div>
+                    </div>
+                    <div class="album joshgarrels">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Pleasaing</h1>
+                        </div>
+                    </div>
+                    <div class="album mitchfroemming">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Exciting</h1>
+                        </div>
+                    </div>
+                    <div class="album patmcgee">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Angry</h1>
+                        </div>
+                    </div>
+                    <div class="album truenorthrecords">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Nervous</h1>
+                        </div>
+                    </div>
+                    <div class="album wildchild">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Sad</h1>
+                        </div>
+                    </div>
+                    <div class="album aaronparker">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Boring</h1>
+                        </div>
+                    </div>
+                    <div class="album camiloseptimo">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Sleepy</h1>
+                        </div>
+                    </div>
+                    <div class="album thesaintjohns">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Calm</h1>
+                        </div>
+                    </div>
+                    <div class="album saintseneca">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Peaceful</h1>
+                        </div>
+                    </div>
+                    <div class="album albertacross">
+                        <div class="art"></div>
+                        <div class="info">
+                            <h1>Relaxed</h1>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="tab genres">
+                    <div class="genre chill">
+                        <div class="art">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="info">
+                            <h1>Chill</h1>
+                        </div>
+                    </div>
+                    <div class="genre folk">
+                        <div class="art">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="info">
+                            <h1>Lounge</h1>
+                        </div>
+                    </div>
+                    <div class="genre jazz-blues">
+                        <div class="art">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="info">
+                            <h1>Indie</h1>
+                        </div>
+                    </div>
+                    <div class="genre metal">
+                        <div class="art">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="info">
+                            <h1>Blues</h1>
+                        </div>
+                    </div>
+                    <div class="genre pop">
+                        <div class="art">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="info">
+                            <h1>Folk</h1>
+                        </div>
+                    </div>
+                    <div class="genre party">
+                        <div class="art">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="info">
+                            <h1>Rock</h1>
+                        </div>
+                    </div>
+                    <div class="genre rap">
+                        <div class="art">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="info">
+                            <h1>Metal</h1>
+                        </div>
+                    </div>
+                    <div class="genre rock">
+                        <div class="art">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="info">
+                            <h1>Electronic</h1>
+                        </div>
+                    </div>
+                    <div class="genre workout">
+                        <div class="art">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="info">
+                            <h1>Pop</h1>
+                        </div>
+                    </div>
+                    <div class="genre-content chill">
+                        <div class="album-large">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Chill</h1>
+                            <ul class="songs-list">
+                                <li id="sID072" data-song="http://audionautix.com/Music/PartingGlass.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Parting Glass <br> genre: chill</p></li>
+                                <li id="sID073" data-song="http://audionautix.com/Music/Serenity.mp3"><span><i>2</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Serenity<br> genre: chill</p></li>
+                                <li id="sID074" data-song="http://s3.amazonaws.com/static.noisetrade.com/w/53b6b979-2df9-4eb3-8a5d-634418ff4dcc/no-confies-en-mi-streaming.mp3"><span><i>3</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Amazing Grace<br> genre: chill</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="genre-content folk">
+                        <div class="album-large">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Lounge</h1>
+                            <ul class="songs-list">
+                                <li id="sID079" data-song="http://audionautix.com/Music/PartingGlass.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Parting Glass<br> genre: Lounge</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="genre-content jazz-blues">
+                        <div class="album-large">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Indie</h1>
+                            <ul class="songs-list">
+                                <li id="sID079" data-song="http://audionautix.com/Music/AutumnSunset.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Autumn Sunset <br> genre: indie</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="genre-content metal">
+                        <div class="album-large">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Blues</h1>
+                            <ul class="songs-list">
+                                <li id="sID079" data-song="http://audionautix.com/Music/AcousticBlues.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Autumn Sunset<br> genre: blues</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="genre-content pop">
+                        <div class="album-large">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Folk</h1>
+                            <ul class="songs-list">
+                                <li id="sID079" data-song="http://audionautix.com/Music/Minstrel.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Minstrel<br> genre: folk</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="genre-content party">
+                        <div class="album-large">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Rock</h1>
+                            <ul class="songs-list">
+                                <li id="sID079" data-song="http://audionautix.com/Music/HiFiBrutality.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: HiFi Brutality<br> genre: rock</p></li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="genre-content rap">
+                        <div class="album-large">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Metal</h1>
+                            <ul class="songs-list">
+                                <li id="sID079" data-song="http://audionautix.com/Music/Pentagram.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Minstrel<br>genre: Metal</p></li>
+                                    <li id="sID079" data-song="http://audionautix.com/Music/LongLiveDeath.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Long Live Death<br>genre: Metal</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="genre-content rock">
+                        <div class="album-large">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Electronic</h1>
+                            <ul class="songs-list">
+                                <li id="sID079" data-song="http://audionautix.com/Music/BigCarTheft.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Big Car Thief<br>genre: Electronic</p></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                        <div class="genre-content workout">
+                        <div class="album-large">
+                            <div class="gArt"></div>
+                        </div>
+                        <div class="songs">
+                            <h1>Pop</h1>
+                            <ul class="songs-list">
+                                <li id="sID079" data-song="http://audionautix.com/Music/FunkyJunky.mp3"><span><i>1</i> <img src="images/svg/pause_line.svg" class="playing"><img src="images/svg/play_line.svg" class="notplaying"></span>
+                                    <p>song: Funky Junky<br>genre: pop</p></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="controls" id="playerJS">
+                    <div id="currentNP">
+                        <div id="bottomArt"></div>
+                    </div>
+                    <div class="prev-btn c-btn np-btn">
+                        <img src="images/svg/reverse_filled.svg">
+                    </div>
+                    <div class="play-btn c-btn" id="playBtn">
+                        <img src="images/svg/play_filled.svg" class="notplaying">
+                        <img src="images/svg/pause_filled.svg" class="playing">
+                    </div>
+                    <div class="next-btn c-btn np-btn">
+                        <img src="images/svg/forward_filled.svg">
+                    </div>
+                    <div class="current-time s-time">0:00</div>
+                    <div class="slider">
+                        <input id="slider" type="range" value="0" max="">
+                        <div class="sliderBg"></div>
+                    </div>
+                    <div class="song-length s-time">0:00</div>
+
+                    <div class="loop-btn o-btn">
+                        <img src="images/svg/loop_off.svg" class="notlooped">
+                        <img src="images/svg/loop_on.svg" class="looped">
+                    </div>
+                    <div class="cloud-btn o-btn">
+                        <a href="#downloadlink" download>
+                            <img src="images/svg/cloud_line.svg" class="notdownloaded">
+                            <img src="images/svg/cloud_filled.svg" class="downloaded">
+                        </a>
+                    </div>
+                    <div class="star-btn o-btn">
+                        <img src="images/svg/star_line.svg" class="notstarred">
+                        <img src="images/svg/star_filled.svg" class="starred">
+                    </div>
+                    <div class="share-btn">
+                        <img src="images/svg/export_line.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/lib/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="src/lib/localforage.nopromises.min.js"></script>
+    
+    <script type="text/javascript" src="../../dist/sconfig.min.js"></script>
+    <script type="text/javascript" src="../../dist/splayer.min.js"></script>
+    
+    <script type="text/javascript" src="src/main.js"></script>
+    <script type="text/javascript" src="src/other.js"></script>
+    <script type="text/javascript">
+    var count = 0;
+    $('#button1').click(function() {
+        $('#button1').animate({
+            height: '+=3',
+            width: '+=3'
+        }, 1);
+        $("#button1").animate({
+            "font-size": '+=0.2'
+        });
+        //This method keeps increasing the height by 36px
+        $('#button2').animate({
+            height: '-=1',
+            width: '-=1'
+        }, 1);
+        $("#button2").animate({
+            "font-size": '-=0.1'
+        });
+        $('#button3').animate({
+            height: '-=1',
+            width: '-=1'
+        }, 1);
+        $("#button3").animate({
+            "font-size": '-=0.1'
+        });
+        $('#button4').animate({
+            height: '-=1',
+            width: '-=1'
+        }, 1);
+        $("#button4").animate({
+            "font-size": '-=0.1.5'
+        });
+    
+});
+$('#button2').click(function() {
+    for (count = 1; count < 2; count++) {
+        $('#button1').animate({
+            height: '-=1',
+            width: '-=1'
+        }, 1);
+        $("#button1").animate({
+            "font-size": '-=0.15'
+        });
+        //This method keeps increasing the height by 36px
+        $('#button2').animate({
+            height: '+=2',
+            width: '+=2'
+        }, 1);
+        $("#button2").animate({
+            "font-size": '+=0.15'
+        });
+        $('#button3').animate({
+            height: '-=1',
+            width: '-=1'
+        }, 1);
+        $("#button3").animate({
+            "font-size": '-=0.2'
+        });
+        $('#button4').animate({
+            height: '-=1',
+            width: '-=1'
+        }, 1);
+        $("#button4").animate({
+            "font-size": '-=0.1.5'
+        });
+    }
+});
+$('#button3').click(function() {
+    for (count = 1; count < 2; count++) {
+        $('#button1').animate({
+            height: '-=1',
+            width: '-=1'
+        }, 1);
+        $("#button1").animate({
+            "font-size": '-=0.15'
+        });
+        //This method keeps increasing the height by 36px
+        $('#button2').animate({
+            height: '-=1',
+            width: '-=1'
+        }, 1);
+        $("#button2").animate({
+            "font-size": '-=0.2'
+        });
+        $('#button3').animate({
+            height: '+=3',
+            width: '+=3'
+        }, 1);
+        $("#button3").animate({
+            "font-size": '+=0.4'
+        });
+        $('#button4').animate({
+            height: '-=1',
+            width: '-=1'
+        }, 1);
+        $("#button4").animate({
+            "font-size": '-=0.1.5'
+        });
+    }
+});
+$('#button4').click(function() {
+    for (count = 1; count < 2; count++) {
+        $('#button1').animate({
+            height: '-=1',
+            width: '-=1'
+        }, 1);
+        $("#button1").animate({
+            "font-size": '-=0.15'
+        });
+        //This method keeps increasing the height by 36px
+        $('#button2').animate({
+            height: '-=1',
+            width: '-=1'
+        }, 1);
+        $("#button2").animate({
+            "font-size": '-=0.2'
+        });
+        $('#button3').animate({
+            height: '-=1',
+            width: '-=1'
+        }, 1);
+        $("#button3").animate({
+            "font-size": '-=0.2'
+        });
+        $('#button4').animate({
+            height: '+=3',
+            width: '+=3'
+        }, 1);
+        $("#button4").animate({
+            "font-size": '+=0.2'
+        });
+    }
+}); 
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.album.robyncage').click(function() {
+            $('body.discover').css('background', '#f6eb36')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.album.joshgarrels').click(function() {
+            $('body.discover').css('background', '#f6eb36')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.album.mitchfroemming').click(function() {
+            $('body.discover').css('background', '#f6eb36')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.album.shayleesimeone').click(function() {
+            $('body.discover').css('background', '#f6eb36')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.album.patmcgee').click(function() {
+            $('body.discover').css('background', '#e41d3d')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.album.heathmcnease').click(function() {
+            $('body.discover').css('background', '#e41d3d')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.album.greatmutations').click(function() {
+            $('body.discover').css('background', '#e41d3d')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.album.truenorthrecords').click(function() {
+            $('body.discover').css('background', '#e41d3d')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.album.wildchild').click(function() {
+            $('body.discover').css('background', '#90CAF9')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.album.aaronparker').click(function() {
+            $('body.discover').css('background', '#90CAF9')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.album.camiloseptimo').click(function() {
+            $('body.discover').css('background', '#90CAF9')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.album.saintseneca').click(function() {
+            $('body.discover').css('background', '#5f9638')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.genre.chill').click(function() {
+            $('body.discover').css('background', '#5f9638')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.genre.folk').click(function() {
+            $('body.discover').css('background', '#5f9638')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.genre.jazz-blues').click(function() {
+            $('body.discover').css('background', '#90CAF9')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.genre.metal').click(function() {
+            $('body.discover').css('background', '#90CAF9')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.genre.pop').click(function() {
+            $('body.discover').css('background', '#90CAF9')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.genre.party').click(function() {
+            $('body.discover').css('background', '#e41d3d')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.genre.rap').click(function() {
+            $('body.discover').css('background', '#e41d3d')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.genre.rock').click(function() {
+            $('body.discover').css('background', '#f6eb36')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.genre.workout').click(function() {
+            $('body.discover').css('background', '#f6eb36')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.album.thesaintjohns').click(function() {
+            $('body.discover').css('background', '#5f9638')
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.album.albertacross').click(function() {
+            $('body.discover').css('background', '#5f9638')
+        });
+    });
+</script>
+
+<script type ="text/javascript">
+sort = function() {
+    var len = clickSort.length;
+    for (var i=0; i<len; i++)
+    {
+        $('.tab.topsongs.active').prepend( clickSort.pop() );
+    }
+    
+};
+clickSort = [];
+$(document).ready(function() {
+    $('.album.robyncage').on('click', function() {
+        clickSort.push( $(this) );
+    });
+     $('.album.joshgarrels').on('click', function() {
+        clickSort.push( $(this) );
+    });
+    $('.album.mitchfroemming').on('click', function() {
+        clickSort.push( $(this) );
+    });
+    $('.album.alexon').on('click', function() {
+        clickSort.push( $(this) );
+    });
+    $('.album.shayleesimeone').on('click', function() {
+        clickSort.push( $(this) );
+    });
+    $('.album.patmcgee').on('click', function() {
+        clickSort.push( $(this) );
+    });
+    $('.album.heathmcnease').on('click', function() {
+        clickSort.push( $(this) );
+    });
+    $('.album.greatmutations').on('click', function() {
+        clickSort.push( $(this) );
+    });
+    $('.album.truenorthrecords').on('click', function() {
+        clickSort.push( $(this) );
+    });
+    $('.album.wildchild').on('click', function() {
+        clickSort.push( $(this) );
+    });
+    $('.album.aaronparker').on('click', function() {
+        clickSort.push( $(this) );
+    });
+    $('.album.camiloseptimo').on('click', function() {
+        clickSort.push( $(this) );
+    });
+    $('.album.saintseneca').on('click', function() {
+        clickSort.push( $(this) );
+    });
+});
+</script>
+</body>
+
+</html>
