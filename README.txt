@@ -7,3 +7,5 @@ SSUI is a music player prototype. The prototype aims to understand user’s most
 Can open application with SSUIplayer/SSUIplayer/index.html
 
 *Application has been modified for demo purposes.
+![alt tag](http://i.imgur.com/NiKyxjL.png "Description goes here")
+<a href="http://imgur.com/NiKyxjL"><img src="http://i.imgur.com/NiKyxjL.png" title="source: imgur.com" /></a>
