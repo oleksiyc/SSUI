@@ -9,10 +9,10 @@ To open the application, follow the link
 ```
 SSUIplayer/SSUIplayer/index.html
 ```
-Initial model
-![](http://i.imgur.com/NiKyxjL.png)
+Initial model:
+![](http://imgur.com/NiKyxjL)
 
-Automated model
+Automated model:
 ![](http://i.imgur.com/ivALOkP.png)
 
 *Application has been modified for demo purposes.
