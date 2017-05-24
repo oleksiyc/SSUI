@@ -7,7 +7,7 @@ SSUI is a music player prototype. The prototype aims to understand user’s most
 
 To open the application, follow the link
 ```
-SSUI/SSUI/index.html
+SSUIplayer/SSUIplayer/index.html
 ```
 Initial model
 ![](http://i.imgur.com/NiKyxjL.png)
