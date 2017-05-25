@@ -11,7 +11,7 @@ SSUIplayer/SSUIplayer/index.html
 ```
 ## Initial model:
 
-<img width="900" alt="screen shot 2017-05-25 at 09 32 26" src="http://i.imgur.com/NiKyxjL.png?1">
+<img width="800" alt="screen shot 2017-05-25 at 09 32 26" src="http://i.imgur.com/NiKyxjL.png?1">
 
 ## Automated Adaptations (based on user actions) model:
 
