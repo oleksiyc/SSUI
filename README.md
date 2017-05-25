@@ -9,11 +9,13 @@ To open the application, follow the link
 ```
 SSUIplayer/SSUIplayer/index.html
 ```
-Initial model:
-![](http://i.imgur.com/NiKyxjL.png?1)
+## Initial model:
 
+<img width="900" alt="screen shot 2017-05-25 at 09 32 26" src="http://i.imgur.com/NiKyxjL.png?1">
 
-Automated Adaptations (based on user actions) model:
-![](http://i.imgur.com/ivALOkP.png)
+## Automated Adaptations (based on user actions) model:
+
+<img width="750" alt="screen shot 2017-05-25 at 09 32 26" src="http://i.imgur.com/ivALOkP.png">
+
 
 *Application has been modified for demo purposes.
